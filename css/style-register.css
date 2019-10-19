@@ -1,0 +1,15 @@
+body {
+    margin:0;
+}
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+header #uac, #fdi{
+    height: 10%;
+    width: 10%;
+}
