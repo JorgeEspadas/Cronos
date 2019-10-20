@@ -7,7 +7,6 @@ class Conexion{
      */
     function getConnection(){
         require_once('reader.php');
-        $reader = new reader();
         $config = reader::readJSON('../config/mysql_config.json');
        return $conn = mysqli_connect($config["IP"], $config["USR"], $config["PWD"], $config["DB"]);
     }   
