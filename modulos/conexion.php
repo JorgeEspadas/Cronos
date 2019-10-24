@@ -5,10 +5,15 @@ class Conexion{
      * Se que se usa el "require once" en estas cosas de base de datos.
      * No se si esta bien manejarlo como un objeto tal cual a lo java.       
      */
-    function getConnection(){
+   function getConnection(){
         require_once('reader.php');
         $config = reader::readJSON('../config/mysql_config.json');
-       return $conn = mysqli_connect($config["IP"], $config["USR"], $config["PWD"], $config["DB"]);
+        
+     $conn = mysqli_connect($config["IP"], $config["USR"], $config["PWD"], $config["DB"]);
+       mysqli_set_charset($conn,"UTF8");
+       
+      return $conn;
+       
     }   
 }
 ?>
