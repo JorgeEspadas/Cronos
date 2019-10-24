@@ -19,11 +19,8 @@
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
             <button class="btn btn-light btn-lg btn-block" type="submit">Ingresar</button>
         </form>
-
         <script src="../js/jquery-3.4.1.min.js"></script>
         <script src="../js/popper.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
     </body>
 </html>
-
-
