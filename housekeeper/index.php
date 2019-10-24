@@ -1,43 +1,29 @@
-<!DOCTYPE html>
+<!DOCTYPE  html>
 <html lang = "es">
     <head>
-        <title>Registro</title>
-        <link rel = "stylesheet" href = "./css/style-register.css">
-        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <title>Administracion</title>
+        <link rel = "stylesheet" href = "../css/estilos.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta charset = "utf-8">
-        <link rel="shortcut icon" href="image/logo-apolo.jpg">
+        <link rel="shortcut icon" href="../image/logo-apolo.jpg">
     </head>
-    <body>
-        <header class = "container-fluid">
-            <div class = "row d-flex justify-content-between">
-                <img id = "uac" class = "" src = "image/uac-logo.png" alt = "UAC" width="95" height="95">
-                <img id = "fdi" src = "image/fi.png" alt = "FDI" width="95" height="95">
-            </div>
-        </header>
-        
-        <main class = "container d-flex justify-content-center align-items-center" id="accordion-main" >
-            <div class="row card  d-block" style="width: 18rem;">
-                <div class= " d-flex justify-content-end m-3">
-                    <button type="button" class="btn btn-link" data-toggle= "collapse" data-target= "#config" aria-expanded="false" aria-control="collapseOne"><img class="img-fluid" src="image/configuraciones.png" width="30"></button>
-                </div>
-                <img class="card-img-top img-fluid" src="image/lector-prueba.gif" alt="Escaner">
-                <div class="card-body  text-center">
-                    <h4 class="card-text">Escanea tu credencial en la camara.</h4>
-              </div>
-            </div>
-        </main>
-        <section class="container-fluid">
-            <div  class="row m-0 mt-4 p-2 m-sm-5 collapse" data-parent="#accordion-main" id="config">
-                <div class="col-12">
-                    Hola perro
-                </div>
-            </div>
-        </section>
-        
-        
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+    <body class="text-center">
+        <!-- Alguien porfavor ponga acentos y la enie ptm. -->
+        <form class="col-10 col-sm-5 col-lg-4 col-xl-3 form-signin">
+            <img class="mb-4" src="../image/logo-apolo.jpg" alt="" width="140" height="100">
+            <h1 class="h3 mb-3 font-weight-normal">Portal de Acceso</h1>
+            <label for="inputEmail" class="sr-only">Matricula de Acceso</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Contrasena</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <button class="btn btn-light btn-lg btn-block" type="submit">Ingresar</button>
+        </form>
+
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
     </body>
 </html>
+
+
