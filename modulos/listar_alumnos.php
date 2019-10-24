@@ -125,7 +125,7 @@
                                 <td> <?php echo $row['estado']?></td>
                                 <td> <?php echo $row['id_horario'] ?></td>
                             </tr>
-						<?php } ?>
+			<?php } ?>
                     </tbody>
                 </table>
             </div>
