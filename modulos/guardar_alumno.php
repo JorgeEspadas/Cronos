@@ -1,38 +1,38 @@
 <?php
 
     
-        include('conexion.php');
-        $con = new Conexion();
+    include('conexion.php');
+    $con = new Conexion();
         
-        $test = $con::getConnection();       
+    $test = $con::getConnection();       
   
 
-if(isset($_POST['matricula']) &&isset($_POST['nombre']) && isset($_POST['apellidos'])&& isset($_POST['correo'])
-        && isset($_POST['password']) &&isset($_POST['licenciatura'])&&isset($_POST['semestre'])&&isset($_POST['estado'])
-        &&isset($_POST['horario'])){
+    if(isset($_POST['matricula']) &&isset($_POST['nombre']) && isset($_POST['apellidos'])&& isset($_POST['correo'])
+            && isset($_POST['password']) &&isset($_POST['licenciatura'])&&isset($_POST['semestre'])&&isset($_POST['estado'])
+            &&isset($_POST['horario'])){
    
     
-  $matricula = $_POST['matricula']; 
-  $nombre = $_POST['nombre'];
-  $apellidos= $_POST['apellidos'];
-  $correo = $_POST['correo'];
-  $password = $_POST['password'];
-  $licenciatura = $_POST['licenciatura'];
-  $semestre = $_POST['semestre'];
-  $grupo= $_POST['grupo'];
-  $estado= $_POST['estado'];
-  $id_horario=$_POST['horario'] ;
+          $matricula = $_POST['matricula']; 
+          $nombre = $_POST['nombre'];
+          $apellidos= $_POST['apellidos'];
+          $correo = $_POST['correo'];
+          $password = $_POST['password'];
+          $licenciatura = $_POST['licenciatura'];
+          $semestre = $_POST['semestre'];
+          $grupo= $_POST['grupo'];
+          $estado= $_POST['estado'];
+          $id_horario=$_POST['horario'] ;
             
            
-           
-}else{
-    header("Location:nuevo_alumno.php");
 
-}
+    }else{
+        header("Location:nuevo_alumno.php");
+
+    }
   
 
   
-  $sql = "INSERT INTO alumno (matricula_alumno, nombre, apellidos, correo, password, licenciatura, semestre, grupo, estado,id_horario) 
+    $sql = "INSERT INTO alumno (matricula_alumno, nombre, apellidos, correo, password, licenciatura, semestre, grupo, estado,id_horario) 
           VALUES('$matricula','$nombre','$apellidos','$correo','$password','$licenciatura','$semestre','$grupo','$estado',$id_horario)";
 
     $result = mysqli_query($test, $sql);
