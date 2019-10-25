@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta charset = "utf-8">
-        <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+        <link rel="shortcut icon" type="../image/x-icon" href="image/favicon.ico">
     </head>
     <body>
         <header>
@@ -18,15 +18,15 @@
                     <div class = "collapse navbar-collapse" id = "menu">
                         <ul class = "navbar-nav ml-auto">
                             <li class = "nav-item"><a href="home.html" class = "nav-link">Inicio</a></li>
-                            <li class = "nav-item"><a href="#" class = "nav-link active">Asesores</a></li>
-                            <li class = "nav-item"><a href="student.html" class = "nav-link">Alumnos</a></li>
+                            <li class = "nav-item"><a href="professor.html" class = "nav-link">Asesores</a></li>
+                            <li class = "nav-item"><a href="#" class = "nav-link active">Alumnos</a></li>
                             <li class = "nav-item"><a href="#" class = "nav-link">Salir</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-        
+         <?php include('../modulos/listar_alumnos.php'); ?>
         
         <script src="../js/jquery-3.4.1.min.js"></script>
         <script src="../js/popper.min.js"></script>

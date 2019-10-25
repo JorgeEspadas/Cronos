@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="es">
     
     <head>
         <meta charset="utf-8">
@@ -70,10 +70,10 @@
         
         ?>
         <div class="container"><br>
-            
-             <a href="nuevo_alumno.php" class="btn btn-primary">Añadir Nuevo Alumno</a>  <br> <br>
+
+            <a href="../modulos/nuevo_alumno.php" class="btn btn-primary">Añadir Nuevo Alumno</a>  <br> <br>
              
-            <form action="listar_alumnos.php" method="post" >
+            <form action="../housekeeper/student.php" method="post">
                 <label>Semestre:</label>
                 <br>
                  <select  class="form-control" name="filtro">
