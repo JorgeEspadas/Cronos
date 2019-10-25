@@ -27,8 +27,10 @@
               </div>
             </div>
         </main>
+        
+        <!--Seccion para las configuraciones del escaner-->
         <section class="container-fluid">
-            <div  class="row m-0 mt-4 p-2 m-sm-5 collapse" data-parent="#accordion-main" id="config">
+            <div  class="row m-0 mt-4 p-2 mt-sm-5 collapse" data-parent="#accordion-main" id="config">
                 <div class="col-12">
                     <div class="controls">
                         <fieldset class="input-group">
