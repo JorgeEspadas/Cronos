@@ -105,7 +105,7 @@
                     <div id="result_strip">
                         <ul class="thumbnails"></ul>
                     </div>
-                    <div class="invisible">
+                    <div class="d-none">
                     <div id="interactive" class="viewport"></div>
                     </div>
                 </section>
