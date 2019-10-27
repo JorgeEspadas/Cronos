@@ -1,23 +1,19 @@
 <html lang="en">
-    
     <head>
-        <meta charset="utf-8">
-      
+        <meta charset="utf-8">     
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/bootstrap-theme.css" rel="stylesheet">
 	<script src="../js/jquery-3.4.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>	
-                
     </head>
     <body>
-        <?php    
+        <?php         
+        include_once('conexion.php');
+        //aaaa se mamaron.
+        //include('../housekeeper/alumnos.php');
         
-        include('conexion.php');
-        include('../housekeeper/student.php');
-        $con = new Conexion();
-        
-        $test = $con::getConnection();
+        $test = conexion::getConnection();
 
                 
         if(isset($_POST['filtro'])){
@@ -74,7 +70,7 @@
             
              <a href="nuevo_alumno.php" class="btn btn-primary">Añadir Nuevo Alumno</a>  <br> <br>
              
-            <form action="listar_alumnos.php" method="post" >
+            <form action="" method="post" >
                 <label>Semestre:</label>
                 <br>
                  <select  class="form-control" name="filtro">

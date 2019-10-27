@@ -10,13 +10,13 @@
     </head>
     <body class="text-center">
         <!-- Alguien porfavor ponga acentos y la enie ptm. -->
-        <form class="col-10 col-sm-5 col-lg-4 col-xl-3 form-signin">
+        <form class="col-10 col-sm-5 col-lg-4 col-xl-3 form-signin" method="post" action="login.php">
             <img class="mb-4" src="../image/logo-apolo.jpg" alt="" width="140" height="100">
             <h1 class="h3 mb-3 font-weight-normal">Portal de Acceso</h1>
-            <label for="inputEmail" class="sr-only">Matricula de Acceso</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputEmail" class="sr-only">ID de Empleado</label>
+            <input type="text" name="id_empleado" id="id_empleado" class="form-control" placeholder="ID. De Empleado" required autofocus>
             <label for="inputPassword" class="sr-only">Contrasena</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
             <button class="btn btn-light btn-lg btn-block" type="submit">Ingresar</button>
         </form>
         <script src="../js/jquery-3.4.1.min.js"></script>

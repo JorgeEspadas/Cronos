@@ -8,6 +8,18 @@
         <link rel="shortcut icon" type="image/x-icon" href="../image/favicon.ico">
     </head>
     <body>
+        
+        <?php
+            session_start();
+            if (isset( $_SESSION['session_id'] ) ) {
+                // Deja accesar a la pagina loguedo.
+                
+            } else {
+                // Redirect a la pagina de acceso :v
+                header("Location: acceso.php");
+            }
+        ?>
+        
          <!--ENCABEZADO-->
         <header>
             <nav class = "navbar navbar-dark bg-secondary navbar-expand-md">
@@ -24,7 +36,7 @@
                             <li class = "nav-item"><a href="#" class = "nav-link">Asesores</a></li>
                             <li class = "nav-item"><a href="#" class = "nav-link">Alumnos</a></li>
                             -->
-                            <li class = "nav-item"><a href="#" class = "nav-link">Salir</a></li>
+                            <li class = "nav-item"><a href="logout.php" class = "nav-link">Salir</a></li>
                         </ul>
                     </div>
                 </div>
@@ -36,10 +48,10 @@
                 <div class = "container-fluid">
                     <div class = "row d-flex justify-content-center">
                         <div class = "col-4 card-img border mr-4">
-                                <a href="professor.html"><img class = "img-fluid" src="../image/logo-apolo2.jpg" height="60px"></a>
+                                <a href="asesor.php"><img class = "img-fluid" src="../image/logo-apolo2.jpg" height="60px"></a>
                         </div>
                         <div class = "col-4 card-img border">
-                                <a href="student.html"><img class = "img-fluid" src="../image/logo-apolo2.jpg" height="60px"></a>
+                            <a href="alumnos.php"><img class = "img-fluid" src="../image/logo-apolo2.jpg" height="60px"></a>
                         </div>
                     </div>
                 </div>
