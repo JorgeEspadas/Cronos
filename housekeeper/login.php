@@ -12,7 +12,7 @@
             session_start();
             if(!empty($_POST)){
                 if(isset($_POST['id_empleado']) && isset($_POST['password'])){
-                    require_once('conexion.php');
+                    require_once('../modulos/conexion.php');
                     $con = conexion::getConnection();
                     $stmt = $con->prepare('SELECT * FROM asesor WHERE id_empleado = ?');
                     $stmt->bind_param('s', $_POST['id_empleado']);                   
