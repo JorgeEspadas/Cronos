@@ -112,7 +112,7 @@
 					
                     <tbody>
                         <?php while($row = $result->fetch_array(MYSQLI_ASSOC)) { ?>
-                            <tr>								
+                            <tr>
                                 <td> <?php echo $row['matricula_alumno'] ?></td>
                                 <td> <?php echo $row['nombre'] ?></td>
                                 <td> <?php echo $row['apellidos'] ?></td>
@@ -123,7 +123,7 @@
                                 <td> <?php echo $row['estado']?></td>
                                 <td> <?php echo $row['id_horario'] ?></td>
                                 <form method="post" action="../housekeeper/editor.php">
-                                           <input type="hidden" name="matricula_alumno" value="<?php echo $row['matricula_alumno']?>"
+                                           <input type="hidden" name="matricula_alumno" value="<?php echo $row['matricula_alumno']?>">
                                            <td><input type="image" name="mod" src="../image/editar.png" width="25px" alt="Editar"></td>
                                 </form>
                             </tr>
