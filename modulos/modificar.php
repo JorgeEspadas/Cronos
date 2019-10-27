@@ -1,27 +1,97 @@
 <?php
-
     include('conexion.php');
-        $con = new Conexion();
+        // Simon. xd
+        $test = conexion::getConnection();
         
-        $test = $con::getConnection();
-        
-        if(isset($_GET['matricula_alumno'])){
-        
-	$id = $_GET['matricula_alumno'];
-        }else{
-            header("Location:listar_alumnos.php");
-        }
-	
-	$sql = "SELECT * FROM alumno where matricula_alumno = '$id'";
-        
-        $result = mysqli_query($test, $sql);
-	
-	$row = mysqli_fetch_array($result);
-	
-?>
+        if(isset($_POST['mod'])){
+            //update llamado.
+            if(isset($_POST['matricula_alumno']) &&isset($_POST['nombre']) && isset($_POST['apellidos'])&& isset($_POST['correo'])
+            && isset($_POST['password']) &&isset($_POST['licenciatura'])&&isset($_POST['semestre'])&&isset($_POST['estado'])
+            &&isset($_POST['id_horario'])){
+   
+    
+              $matricula = $_POST['matricula_alumno']; 
+              $nombre = $_POST['nombre'];
+              $apellidos= $_POST['apellidos'];
+              $correo = $_POST['correo'];
+              $password = $_POST['password'];
+              $licenciatura = $_POST['licenciatura'];
+              $semestre = $_POST['semestre'];
+              $grupo= $_POST['grupo'];
+              $estado= $_POST['estado'];
+              $id_horario=$_POST['id_horario'] ;
+              
+
+                $sql = "UPDATE alumno SET matricula_alumno ='$matricula', nombre = '$nombre', apellidos ='$apellidos', correo='$correo',password='$password',licenciatura='$licenciatura',semestre='$semestre',grupo='$grupo',id_horario='$id_horario' WHERE matricula_alumno ='$matricula';";
+                $result = mysqli_query($test, $sql);
+            
+            
+            if(!$rt ){
+                echo mysqli_error($test);
+                ?>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Chale </strong> Ocurrio un problema con la comunicacion de la base de datos :v
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                <?php
+            }
+            ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Hecho! </strong> Cambios Guardados
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+            <?php
+        }      
+        }else if(isset($_POST['del'])){
+            if(isset($_POST['matricula_alumno']) &&isset($_POST['nombre']) && isset($_POST['apellidos'])&& isset($_POST['correo'])
+            && isset($_POST['password']) &&isset($_POST['licenciatura'])&&isset($_POST['semestre'])&&isset($_POST['estado'])
+            &&isset($_POST['id_horario'])){
+                
+                $matricula = $_POST['matricula_alumno']; 
+                
+                $sql = "DELETE FROM alumno WHERE matricula_alumno ='$matricula';";
+                $result = mysqli_query($test, $sql);
+                    if(!$result ){
+                    echo mysqli_error($test);
+                    ?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Chale </strong> Ocurrio un problema con la comunicacion de la base de datos :v
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                    <?php
+                    }
+                ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Hecho! </strong> El Usuario ha sido borrado.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                    <?php
+                    header("Refresh:3; url=../housekeeper/alumnos.php");
+                }
+            }
+
+            if(isset($_POST['matricula_alumno'])){       
+                $id = $_POST['matricula_alumno'];
+            }else{
+                //header("Location:listar_alumnos.php"); not yet
+            }
+
+            $sql = "SELECT * FROM alumno where matricula_alumno = '$id'";      
+            $result = mysqli_query($test, $sql);
+            $row = mysqli_fetch_array($result);
+
+
+    ?>
 <html lang="es">
-	<head>
-		
+	<head>		
         <meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -31,12 +101,10 @@
 	</head>
 	
 	<body>
-             <div class="container">
-			
+            <div class="container">		
             <h3 class="text-center">Modificar Alumno Con Matricula: <?php echo " ".$id;?></h3>
-		
             
-            <form class="form-horizontal" method="POST" action="actualizar_alumnos.php" autocomplete="off">
+            <form class="form-horizontal" method="POST" action="" autocomplete="off">
                             
                 <div class="form-group">
                     <label for="matricula_alumno" class="col-sm-2 control-label">Matricula</label>
@@ -116,13 +184,12 @@
 
 				
 		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-                            <a href="listar_alumnos.php" class="btn btn-default">Regresar</a>
-                            <button type="submit" value="enviar" name="enviar " value="enviar"class="btn btn-primary">Guardar</button>
+			<div class="col-sm-offset-2 col-sm-12 text-center">
+                            <button type="submit" value="enviar" name="del" value="enviar"class="btn btn-primary center-block">Eliminar</button>
+                            <button type="submit" value="enviar" name="mod" value="enviar"class="btn btn-primary center-block">Guardar</button>
 			</div>
 		</div>
             </form>
-        </div>
-		
+        </div>		
 	</body>
 </html>
