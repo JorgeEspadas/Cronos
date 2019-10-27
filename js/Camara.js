@@ -221,6 +221,13 @@ $(function() {
     Quagga.onDetected(function(result) {
         var code = result.codeResult.code;
         //aqui va el codigo de lo que hara el scanner.
-        alert(code);
+        $.ajax({
+            data: 'matricula=' + code,
+            url: './modulos/lectura.php',
+            method: 'POST', // or GET
+            success: function(msg) {
+                alert(msg);
+        }
+        });
     });
 });
