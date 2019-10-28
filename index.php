@@ -15,7 +15,7 @@
                 <img id = "fdi" src = "image/fi.png" alt = "FDI" width="95" height="95">
             </div>
         </header>
-        
+        <div class="msj"></div>
         <main class = "container d-flex justify-content-center align-items-center" id="accordion-main" >
             <div class="row card  d-block" style="width: 18rem;">
                 <div class= " d-flex justify-content-end m-3">
@@ -27,9 +27,6 @@
               </div>
             </div>
         </main>
-        <div class="msj">
-            
-        </div>
         <!--Seccion para las configuraciones del escaner-->
         <section class="container-fluid">
             <div  class="row m-0 mt-4 p-2 mt-sm-5 collapse" data-parent="#accordion-main" id="config">
@@ -116,8 +113,6 @@
                 </div>
             </div>
         </section>
-        
-        
         <script src="./js/jquery-3.4.1.min.js" type="text/javascript"></script>
         <script src="./js/popper.min.js" type="text/javascript"></script>
         <script src="./js/bootstrap.min.js" type="text/javascript"></script>
