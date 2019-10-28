@@ -220,14 +220,15 @@ $(function() {
 
     Quagga.onDetected(function(result) {
         var code = result.codeResult.code;
-        //aqui va el codigo de lo que hara el scanner.
+        //Falta el delay para evitar que se use el mismo codigo 2 veces muy rapido
+        //Se tiene que auto vaciar. :v
         
         $.ajax({
             data: 'matricula=' + code,
             url: './modulos/lectura.php',
-            method: 'POST', // or GET
+            method: 'POST',
             success: function(msg) {
-                $("div.msj").empty().show().html(msg).delay(3000).fadeOut(5000);
+                $("div.msj").empty().show().html(msg).delay(2000).fadeOut(500);
         }
         });
     });

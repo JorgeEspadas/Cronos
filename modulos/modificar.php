@@ -26,7 +26,7 @@
                 $result = mysqli_query($test, $sql);
             
             
-            if(!$rt ){
+            if(!$result){
                 echo mysqli_error($test);
                 ?>
                     <div class="alert alert-warning alert-dismissible fade show" role="alert">

@@ -40,7 +40,7 @@ if(isset($_POST['matricula'])){
     $row = mysqli_fetch_array($result);
     
     if(!$result){
-        fail_message();
+        
     }else if($row['estado'] == "ausente"){
        //login, ejecutamos query cambiando el estado y mandamos mensaje. sencillo, no? :v
         $sql = "UPDATE alumno SET estado='activo' WHERE matricula_alumno='$matricula';";
@@ -50,6 +50,8 @@ if(isset($_POST['matricula'])){
         $sql = "UPDATE alumno SET estado='ausente' WHERE matricula_alumno='$matricula';";
         $result = mysqli_query($con, $sql);
         return success_logout();
+    }else{
+        return fail_message();
     }
 }
 

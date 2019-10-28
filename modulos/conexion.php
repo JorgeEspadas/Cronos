@@ -9,11 +9,9 @@ class Conexion{
         require_once('reader.php');
         $config = reader::readJSON('../config/mysql_config.json');
         
-     $conn = mysqli_connect($config["IP"], $config["USR"], $config["PWD"], $config["DB"]);
-       mysqli_set_charset($conn,"UTF8");
-       
-      return $conn;
-       
-    }   
+        $conn = mysqli_connect($config["IP"], $config["USR"], $config["PWD"], $config["DB"]);
+        //mysqli_set_charset($conn,"UTF8");       
+      return $conn;      
+    } 
 }
 ?>
