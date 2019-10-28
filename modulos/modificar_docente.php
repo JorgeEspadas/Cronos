@@ -35,7 +35,7 @@
 	<body>
              <div class="container">
 			
-            <h3 class="text-center">Modificar Docente con Matrícula <?php $id ?></h3>
+            <h3 class="text-center">Modificar Docente con Matrícula <?php echo " ".$id ;?></h3>
 		
 
             <form class="form-horizontal" method="POST" action="actualizar_docentes.php" autocomplete="off">
