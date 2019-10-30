@@ -3,56 +3,20 @@
         <meta charset="utf-8">     
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/bootstrap-theme.css" rel="stylesheet">
-	<script src="../js/jquery-3.4.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>	
     </head>
     <body>
         <?php         
         include_once('conexion.php');
-        //aaaa se mamaron.
-        //include('../housekeeper/alumnos.php');
         
         $test = conexion::getConnection();
 
                 
         if(isset($_POST['filtro'])){
-            switch($_POST['filtro'] ){
-  		case "todos":
-                    $sql = "select * from alumno;";
-  			break;
-  		case "1":
-                    $sql = "select * from alumno where semestre =1;";
-  			break;
-                case "2":
-                    $sql = "select * from alumno where semestre =2;";
-  			break;
-  		case "3":
-                    $sql = "select * from alumno where semestre =3;";
-  			break;
-                case "4":
-                    $sql = "select * from alumno where semestre =4;";
-  			break;
-  		case "5":
-                    $sql = "select * from alumno where semestre =5;";
-  			break;
-                case "6":
-                   $sql = "select * from alumno where semestre =6;";
-  			break;
-  		case "7":
-                    $sql = "select * from alumno where semestre =7;";
-  			break;
-                case "8":
-                    $sql = "select * from alumno where semestre =8;";
-  			break;
-                case "9":
-                    $sql = "select * from alumno where semestre =9;";
-  			break;
-                case "10":
-                    $sql = "select * from alumno where semestre =10;";
-  			break;
-
-
+            if($_POST['filtro']=="todos"){
+                $sql = "select * from alumno;";
+            }else{
+                $sql = "select * from alumno where semestre = ".$_POST['filtro'].";";
             }
   	}else{
   		$sql = "select * from alumno;";
@@ -68,48 +32,51 @@
         ?>
         <div class="container"><br>
             
-             <a href="nuevo_alumno.php" class="btn btn-primary">Añadir Nuevo Alumno</a>  <br> <br>
+             <a href="../modulos/nuevo_alumno.php" class="btn btn-secondary mt-3 mb-3">Añadir Nuevo Alumno</a>  <br> <br>
              
-            <form action="" method="post" >
-                <label>Semestre:</label>
-                <br>
-                 <select  class="form-control" name="filtro">
-                 <option value="todos">Todos</option>
-                 <option value="1">1</option>
-                 <option value="2">2</option>
-                 <option value="3">3</option>
-                 <option value="4">4</option>
-                 <option value="5">5</option>
-                 <option value="6">6</option>
-                 <option value="7">7</option>
-                 <option value="8">8</option>
-                 <option value="9">9</option>
-                 <option value="10">10</option>
-                    </select>
-                <br>
-
-                    <button type="submit"  class="btn btn-default">Filtrar</button>
+             <form class="" action="" method="post" >
+                 <div class="d-flex justify-content-start align-items-center mb-4">
+                     <div class="form-group mr-4">
+                         <label class="h6 text-center">Semestre:</label>
+                     </div>
+                    <div class="form-group mr-4">
+                        <select  class="form-control" name="filtro">
+                        <option class=""value="todos">Todos</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                     </select>
+                    </div>
+                     <div class="form-group mr-3">
+                        <button class="btn btn-secondary" type="submit">Filtrar</button>
+                     </div>
+                </div>
               </form>
              		
             <div class="table-responsive">
-		<table class="table table-striped table-hover  ">
+		<table class="table table-striped table-hover">
 		    <thead>
-                    
-                            <tr class =text-center>
-                                <th>Matricula</th>
-                                <th>Nombre</th>
-                                <th>Apellidos</th>
-                                <th>Correo</th>
-                                <th>Licenciatura</th>
-                                <th>Semestre</th>
-                                <th>Grupo</th>
-                                <th>Estado</th>
-                                <th>Horario</th>
-                                <th>Editar</th>
-                                
-                            </tr>
-                    </thead>
-					
+                        <tr class ="text-center">
+                            <th scope="col">Matricula</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Licenciatura</th>
+                            <th scope="col">Semestre</th>
+                            <th scope="col">Grupo</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Horario</th>
+                            <th scope="col">Editar</th>
+
+                        </tr>
+                    </thead>		
                     <tbody>
                         <?php while($row = $result->fetch_array(MYSQLI_ASSOC)) { ?>
                             <tr>
@@ -135,5 +102,3 @@
 		
     </body>
 </html>
-      
-    
