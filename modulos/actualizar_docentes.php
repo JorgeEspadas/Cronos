@@ -21,13 +21,8 @@ include('conexion.php');
         header("Location:nuevo_docente.php");
 
     }
-	
-	
-	
 	$sql = "UPDATE asesor  SET   nombre='$nombre', apellidos='$apellidos', correo='$correo', password='$password',ubicacion='$ubicacion',matricula_alumno='$matricula_alumno' where id_empleado = '$id_empleado'";
 	$result = mysqli_query($test, $sql);
-
-	
 ?>
  
 <html lang="es">
@@ -37,8 +32,6 @@ include('conexion.php');
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link href="../css/bootstrap.min.css" rel="stylesheet">
             <link href="../css/bootstrap-theme.css" rel="stylesheet">
-            <script src="../js/jquery-3.4.1.min.js"></script>
-            <script src="../js/bootstrap.min.js"></script>	
 	</head>
 	
 	<body>

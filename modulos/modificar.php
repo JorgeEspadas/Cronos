@@ -95,14 +95,12 @@
         <meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/bootstrap-theme.css" rel="stylesheet">
-	<script src="../js/jquery-3.4.1.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>		
+	<link href="../css/bootstrap-theme.css" rel="stylesheet">	
 	</head>
 	
 	<body>
             <div class="container">		
-            <h3 class="text-center">Modificar Alumno Con Matricula: <?php echo " ".$id;?></h3>
+            <h3 class="text-center">Modificar Alumno Con Matricula: <?php echo "".$id;?></h3>
             
             <form class="form-horizontal" method="POST" action="" autocomplete="off">
                             
@@ -179,10 +177,7 @@
                             <input type="number" class="form-control" id="id_horario" value="<?php echo $row['id_horario']; ?>" min="1" max="2" name="id_horario" placeholder="Horario" required >
 			</div>
                 </div>
-
-				
-
-				
+	
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-12 text-center">
                             <button type="submit" value="enviar" name="del" value="enviar"class="btn btn-primary center-block">Eliminar</button>

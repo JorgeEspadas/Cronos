@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8">     
     	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +23,7 @@
         ?>
         <div class="container"><br>
             
-             <a href="nuevo_docente.php" class="btn btn-secondary mt-3 mb-3">Añadir Nuevo Docente</a>  <br> <br>
+             <a href="..//modulos/nuevo_docente.php" class="btn btn-secondary mt-3 mb-3">Añadir Nuevo Docente</a>  <br> <br>
              
            
              		
@@ -58,9 +58,6 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-		
+        </div>		
     </body>
 </html>
-      
-    

@@ -216,20 +216,45 @@ $(function() {
     };
 
     App.init();
-
-
+    
+    
+    /*
+     * Es probable que esto ya funcione, por el momento lo deejare así,
+     * a futuras pruebas veremos si jala bien :v
+     * 
+     */
+    var key = false;
+    var aux;
+    function delay(){
+      aux = setTimeout(function(){
+          App.lastResult = null;
+      }, 10000);
+    }
+    
+    
+    
     Quagga.onDetected(function(result) {
         var code = result.codeResult.code;
-        //Falta el delay para evitar que se use el mismo codigo 2 veces muy rapido
-        //Se tiene que auto vaciar. :v
-        
-        $.ajax({
-            data: 'matricula=' + code,
-            url: './modulos/lectura.php',
-            method: 'POST',
-            success: function(msg) {
-                $("div.msj").empty().show().html(msg).delay(2000).fadeOut(500);
+        console.log("estoy aqui");
+        if(App.lastResult !== code){
+            App.lastResult = code;
+            $.ajax({
+                data: 'matricula=' + code,
+                url: './modulos/lectura.php',
+                method: 'POST',
+                success: function(msg) {
+                    $("div.msj").empty().show().html(msg).delay(2000).fadeOut(500);
+                }
+            });
+            key = true;
+        }else{
         }
-        });
+        if(key){
+            key = false;
+            delay();
+            
+        }
+       
     });
 });
+ 
