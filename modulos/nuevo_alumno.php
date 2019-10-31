@@ -90,10 +90,10 @@
                 </div>
 
                 <!-- Botones -->
-                <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <a href="listar_alumnos.php" class="btn btn-default">Regresar</a>
-                            <button type="submit" value="enviar" name="enviar " value="enviar"class="btn btn-primary">Guardar</button>
+                <div class="form-group col-12">
+                        <div class=" d-block d-sm-flex ">
+                            <a class="btn btn-outline-secondary mr-5" href="../housekeeper/alumnos.php">Regresar</a>
+                            <button type="submit" value="enviar" name="enviar " value="enviar" class="btn btn-secondary">Guardar</button>
                         </div>
                 </div>
             </div> 
