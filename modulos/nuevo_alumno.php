@@ -100,6 +100,3 @@
         </form>
     </div>
 </div>
-<?php
-    include('../modulos/footer.php');
-?>

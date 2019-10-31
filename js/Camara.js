@@ -228,14 +228,13 @@ $(function() {
     function delay(){
       aux = setTimeout(function(){
           App.lastResult = null;
-      }, 10000);
+      }, 20000);
     }
     
     
     
     Quagga.onDetected(function(result) {
         var code = result.codeResult.code;
-        console.log("estoy aqui");
         if(App.lastResult !== code){
             App.lastResult = code;
             $.ajax({
@@ -251,8 +250,8 @@ $(function() {
         }
         if(key){
             key = false;
+            alert("ll");
             delay();
-            
         }
        
     });
