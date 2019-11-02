@@ -15,7 +15,7 @@
             <h1 class="h3 mb-3 font-weight-normal">Portal de Acceso</h1>
             <label for="inputEmail" class="sr-only">ID de Empleado</label>
             <input type="text" name="id_empleado" id="id_empleado" class="form-control" placeholder="ID. De Empleado" required autofocus>
-            <label for="inputPassword" class="sr-only">Contrasena</label>
+            <label for="inputPassword" class="sr-only">Contraseña</label>
             <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
             <button class="btn btn-light btn-lg btn-block" type="submit">Ingresar</button>
         </form>
