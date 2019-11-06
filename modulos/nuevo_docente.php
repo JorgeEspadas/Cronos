@@ -8,7 +8,7 @@ $result = mysqli_query($test, $sql);
         <h3 class=" mb-5 h2 col-12">Registrar Nuevo Docente</h3>
 
 
-        <form class="form p-0 m-0" method="POST" action="guardar_docente.php" autocomplete="off">
+        <form class="form p-0 m-0" method="POST" action="../modulos/guardar_docente.php" id="add">
          
                  <div class="form-group d-sm-flex">
                     <label for="id_empleado" class="h5 col-sm-2 col-lg-1 control-label">Matricula</label>
@@ -72,11 +72,10 @@ $result = mysqli_query($test, $sql);
                 <div class="form-group col-12  mt-2">
                         <div class=" d-block d-sm-flex justify-content-end mr-auto mr-sm-3 ">
                             <!--<a class="btn btn-outline-secondary mr-5" href="../housekeeper/alumnos.php">Regresar</a>-->
-                            <button type="submit" value="enviar" name="enviar " value="enviar" class="btn btn-lg btn-outline-secondary btn-lg offset-1 col-10 col-sm-auto">Guardar</button>
+                            <input type="submit" value="Guardar" name="enviar " class="btn btn-lg btn-outline-secondary btn-lg offset-1 col-10 col-sm-auto">
                         </div>
                 </div>
             </div>
         </form>
     </div>
-</div>
-    
+</div>  

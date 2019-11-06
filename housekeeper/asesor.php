@@ -1,5 +1,4 @@
 <?php include ('../modulos/header.php') ?>
-
 <main class="accordion" id="accordion-main">
     <?php include_once('../modulos/opciones.php') ?>
     <?php include_once('../modulos/listar_docentes.php') ?>

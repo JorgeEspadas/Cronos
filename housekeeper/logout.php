@@ -9,6 +9,8 @@
     </head>
     <body>
         <?php 
+        
+        
             session_start();
             if (isset( $_SESSION['session_id'] ) ) {
                 session_destroy();

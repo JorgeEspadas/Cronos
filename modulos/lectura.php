@@ -48,7 +48,7 @@ if(isset($_POST['matricula'])){
         }else {
             $sql = "UPDATE alumno SET estado='ausente' WHERE matricula_alumno='$matricula';";
             $result = mysqli_query($con, $sql);
-            echo alert('Salida Correcta','Ten un buen dia $username (no implementado)', 'alert-warning');
+            echo alert('Salida Correcta','Ten un buen dia $username (no implementado)', 'alert-success');
         }
     }else{
         echo alert('Acceso Denegado','Verifica que tu credencial no tenga el codigo de barras deteriorado o que haz sido dado de alta en el sistema.', 'alert-danger');

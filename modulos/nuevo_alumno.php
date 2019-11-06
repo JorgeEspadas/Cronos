@@ -2,7 +2,7 @@
     <div class="row d-block">
         <p class=" mb-5 h2 col-12">Registrar Nuevo Alumno</p>
 
-        <form class="form-horizontal m-0 p-0" method="POST" action="guardar_alumno.php" autocomplete="off">
+        <form class="form-horizontal m-0 p-0" method="POST" id="add" action="../modulos/guardar_alumno.php" autocomplete="off">
             
                 <!-- Matricula -->
                 <div class="form-group d-sm-flex">
