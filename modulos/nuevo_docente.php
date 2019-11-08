@@ -3,8 +3,8 @@ $sql ="select matricula_alumno , nombre from alumno";
 $result = mysqli_query($test, $sql);
 
 ?>
-<div class="container collapse" id="agregar" data-parent="#accordion-main" aria-labelledby="headingTwo">
-    <div class="row d-block">
+<div class="container-fluid collapse  px-sm-5" id="agregar" data-parent="#accordion-main" aria-labelledby="headingTwo">
+    <div class="row d-block  px-sm-5">
         <h3 class=" mb-5 h2 col-12">Registrar Nuevo Docente</h3>
 
 

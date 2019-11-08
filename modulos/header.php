@@ -6,6 +6,7 @@
     <head>
         <title>Registro</title>
         <link rel="stylesheet" href="../css/style_menu.css">
+        <link rel="stylesheet" href="../css/estilos_content.css">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta charset = "utf-8">

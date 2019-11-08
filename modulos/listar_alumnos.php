@@ -20,8 +20,8 @@ if(!$result )
 }
 
 ?>
-<div class="container collapse show" id="ver" data-parent="#accordion-main" aria-labelledby="headingOne">
-     <form class="" action="" method="post" >
+<div class="container-fluid collapse show px-sm-5" id="ver" data-parent="#accordion-main" aria-labelledby="headingOne">
+     <form class="px-sm-5" action="" method="post" >
          <div class="d-flex justify-content-start align-items-center mb-4">
              <div class="form-group mr-4">
                  <label class="h6 text-center">Semestre:</label>
@@ -47,7 +47,7 @@ if(!$result )
         </div>
       </form>
 
-    <div class="table-responsive">
+    <div class="table-responsive px-sm-5">
         <table class="table table-striped table-hover">
             <thead>
                 <tr class ="text-center">

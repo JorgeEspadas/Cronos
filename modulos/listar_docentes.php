@@ -12,8 +12,8 @@
     }
 
 ?>
-<div class="container collapse show" id="ver" data-parent="#accordion-main" aria-labelledby="headingOne">	
-    <div class="table-responsive">
+<div class="collapse show container-fluid px-sm-5" id="ver" data-parent="#accordion-main" aria-labelledby="headingOne">	
+    <div class="table-responsive px-sm-5">
         <table class="table table-striped table-hover  ">
             <thead>
                 <tr class =text-center>

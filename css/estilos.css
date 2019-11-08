@@ -6,6 +6,10 @@ body{
     background-size: cover;
 }
 
+#alert{
+    transform: translate(100%, 0%);
+}
+
 .login-dark form {
     max-width: 320px;
     width: 90%;

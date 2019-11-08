@@ -1,5 +1,5 @@
-<div class="container collapse" id="agregar" data-parent="#accordion-main" aria-labelledby="headingTwo">
-    <div class="row d-block">
+<div class="container-fluid collapse  px-sm-5" id="agregar" data-parent="#accordion-main" aria-labelledby="headingTwo">
+    <div class="row d-block px-sm-5">
         <p class=" mb-5 h2 col-12">Registrar Nuevo Alumno</p>
 
         <form class="form-horizontal m-0 p-0" method="POST" id="add" action="../modulos/guardar_alumno.php" autocomplete="off">
