@@ -9,14 +9,14 @@
         <meta charset = "utf-8">
         <link rel="shortcut icon" href="../image/logo-apolo.jpg">
     </head>
-    <body>
+    <body class="body">
         <div class="" id="content"></div>
         <br>
         <div class="login-dark">
         <form method="post" action="login.php" id='form-acceso'>
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-            <div class="form-group"><input class="form-control" type="text" name="id_empleado" id="id_empleado" placeholder="ID. De Empleado" required autofocus></div>
+            <div class="form-group"><input class="form-control " type="text" name="id_empleado" id="id_empleado" placeholder="ID. De Empleado" required autofocus></div>
             <div class="form-group"><input class="form-control" type="password" name="password" id="password" placeholder="Password" required></div>
             <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Ingresar</button></div>
             <!--<a class="forgot" href="#">Forgot your email or password?</a>-->

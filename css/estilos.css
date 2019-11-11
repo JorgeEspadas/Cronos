@@ -1,9 +1,11 @@
 body{
-  background: #475d62 url(../image/star-sky.jpg);
+    
+    background: url(../image/background-login.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    
 }
 
 #alert{
@@ -13,15 +15,15 @@ body{
 .login-dark form {
     max-width: 320px;
     width: 90%;
-    background-color: #1e2833;
+    background-color: rgba(75, 75, 75 ,0);
     padding: 40px;
     border-radius: 10px;
     transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
     left: 50%;
-    color: #fff;
-    box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
+    color: black;
+    /*box-shadow: 3px 3px 4px rgba(0,0,0,0.2);*/
 }
 
 .login-dark .illustration {
