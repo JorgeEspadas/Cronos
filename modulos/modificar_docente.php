@@ -15,8 +15,8 @@
                 $correo = $_POST['correo'];
                 $password = $_POST['password'];
                 $ubicacion = $_POST['ubicacion'];
-                
-                $sql = "UPDATE asesor SET id_empleado ='$id_empleado', nombre = '$nombre', apellidos ='$apellidos', correo='$correo',password='$password',ubicacion='$ubicacion' WHERE id_empleado ='$id_empleado';";
+                $matricula_alumno= $_POST['matricula_alumno'];
+                $sql = "UPDATE asesor SET id_empleado ='$id_empleado', nombre = '$nombre', apellidos ='$apellidos', correo='$correo',password='$password',ubicacion='$ubicacion',matricula_alumno='$matricula_alumno' WHERE id_empleado ='$id_empleado';";
                 $result = mysqli_query($test, $sql);
                 
                 if(!$result){
@@ -39,6 +39,8 @@
                         </button>
                         </div>
                 <?php
+                header("Refresh:3; url=../housekeeper/asesor.php");
+                
             }
         }else if(isset($_POST['del'])){
             if(isset($_POST['id_empleado']) &&isset($_POST['nombre']) && isset($_POST['apellidos'])&& isset($_POST['correo'])
@@ -58,6 +60,7 @@
                         </button>
                         </div>
                     <?php
+                    header("Refresh:3; url=../housekeeper/asesor.php");
                     }
                 ?>
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -79,8 +82,10 @@
             $sql = "SELECT * FROM asesor where id_empleado = '$id'";      
             $result = mysqli_query($test, $sql);
             
-            $row = mysqli_fetch_array($result);
-	
+            $row = mysqli_fetch_array($result);      
+            $matricula = $row['matricula_alumno'];
+            $mselected = "SELECT matricula_alumno, nombre FROM alumno where matricula_alumno = ".$matricula;
+            $result2 = mysqli_query($test, $mselected);
             $query="select matricula_alumno , nombre from alumno";
             $resultado = mysqli_query($test, $query);
         
@@ -142,12 +147,18 @@
                 <label for="matricula_alumno" class="col-12 col-md-2 col-lg-1 h5 control-label">Seleccione Alumno</label>
                     <div class="form-group col-12 col-md-5 pl-md-5 col-lg-4">
                         <select class="form-control" id="matricula_alumno" name="matricula_alumno" required="">
+                            <?php $ms = mysqli_fetch_array($result2) ;?>
+                            <option value="<?php echo $ms['matricula_alumno']?>" selected> <?php echo $ms['matricula_alumno'].' - '.$ms['nombre']?> </option>
                              <?php 
                             while($datos = mysqli_fetch_array($resultado))
-                            {  ?>
-                        <option value="<?php echo $datos['matricula_alumno'].$datos['nombre']?>"> <?php echo $datos['matricula_alumno'].' - '.$datos['nombre']?> </option>
+                            {  
+                                if(!($datos['matricula_alumno'] == $matricula)){
+                                    ?>
+                                      <option value="<?php echo $datos['matricula_alumno']?>"> <?php echo $datos['matricula_alumno'].' - '.$datos['nombre']?> </option>  
+                                    <?php
+                                }?>
                             <?php
-                            }  ?> 
+                            }?> 
                         </select>
                     </div>
             </div>
