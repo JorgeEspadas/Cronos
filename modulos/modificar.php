@@ -45,6 +45,7 @@
                     </button>
                     </div>
             <?php
+            header("Refresh:3; url=../housekeeper/alumnos.php");
         }      
         }else if(isset($_POST['del'])){
             if(isset($_POST['matricula_alumno']) && isset($_POST['nombre']) && isset($_POST['apellidos'])&& isset($_POST['correo'])
@@ -65,6 +66,7 @@
                         </button>
                         </div>
                     <?php
+                    header("Refresh:3; url=../housekeeper/alumnos.php");
                     }
                 ?>
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -132,7 +134,7 @@
             <div class="form-group d-sm-flex">
                 <label for="password" class="h5 col-sm-2 col-lg-1 control-label">Contraseña</label>
                     <div class="col-sm-10 col-lg-11 pl-sm-5">
-                        <input type="text" class="form-control" id="password" value="<?php echo $row['password']; ?>" name="password" maxlength="8" placeholder="Contraseña" required="required">
+                        <input type="password" class="form-control" id="password" value="<?php echo $row['password']; ?>" name="password" maxlength="8" placeholder="Contraseña" required="required">
                     </div>
             </div>
 

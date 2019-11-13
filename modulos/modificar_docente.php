@@ -128,7 +128,7 @@
             <div class="form-group d-sm-flex">
                 <label for="password" class="h5 col-sm-2 col-lg-1 control-label">Contraseña</label>
                     <div class="col-sm-10 col-lg-11 pl-sm-5">
-                        <input type="text" class="form-control" id="password" name="password" maxlength="8" value="<?php echo $row['password']; ?>" placeholder="Contraseña" required="required">
+                        <input type="password" class="form-control" id="password" name="password" maxlength="8" value="<?php echo $row['password']; ?>" placeholder="Contraseña" required="required">
                     </div>
             </div>
 

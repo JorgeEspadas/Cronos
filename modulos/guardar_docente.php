@@ -3,15 +3,6 @@
     $con = new Conexion();
         
     $test = $con::getConnection();       
-  
-    function alert($header_message, $text_information,$type_message){
-     $alert_message = '<div class="alert '.$type_message.'" id="alert">
-             <h4 class="alert-heading">'.$header_message.'</h4>
-             <hr>
-             <p>'.$text_information.'</p>
-         </div>';
-     return $alert_message;
-    }
 
     if(isset($_POST['id_empleado']) &&isset($_POST['nombre']) && isset($_POST['apellidos'])&& isset($_POST['correo'])
             && isset($_POST['password']) &&isset($_POST['ubicacion'])&&isset($_POST['matricula_alumno'])){
@@ -32,8 +23,14 @@
          if(!$result){
              
          }
-         echo alert('Correcto','Docente Agregado', 'alert-success');
-          
+         ?>
+         <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Hecho! </strong> Docente Guardado.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+         </div>
+          <?php
     }else{
 //        header("Location:nuevo_docente.php");
 
