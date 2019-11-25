@@ -1,2 +1,2 @@
 # Cronos
-Así le pusieron de nombre, ya ni pedo :v
+Es un sistema de administración de horarios para personal de servicio social.
