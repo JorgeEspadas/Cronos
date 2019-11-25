@@ -1,3 +1,3 @@
 <?php
-    header('./acceso.php');
+    header('location: ./acceso.php');
 ?>
