@@ -245,14 +245,14 @@ $(function() {
                     $("div.msj").empty().show().html(msg).delay(2000).fadeOut(500);
                 }
             });
-            key = true;
+            //key = true;
         }else{
         }
-        if(key){
-            key = false;
-            alert("ll");
-            delay();
-        }
+//        if(key){
+//            key = false;
+//            alert("ll");
+//            delay();
+//        }
        
     });
 });

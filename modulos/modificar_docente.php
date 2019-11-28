@@ -23,7 +23,7 @@
                     echo mysqli_error($test);
                     ?>
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong>Chale </strong> Ocurrio un problema con la comunicacion de la base de datos :v
+                            <strong>Chale </strong> Ocurrio un problema con la comunicacion de la base de datos.
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -33,7 +33,7 @@
                 
                 ?>
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>Hecho! </strong> Cambios Guardados
+                            <strong>Hecho! </strong> Cambios Guardados.
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -54,7 +54,7 @@
                     echo mysqli_error($test);
                     ?>
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong>Chale </strong> Ocurrio un problema con la comunicacion de la base de datos :v
+                            <strong>Chale </strong> Ocurrio un problema con la comunicacion de la base de datos.
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
