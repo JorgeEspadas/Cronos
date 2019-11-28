@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-10-2019 a las 09:48:45
--- Versión del servidor: 10.3.16-MariaDB
--- Versión de PHP: 7.3.7
+-- Tiempo de generación: 28-11-2019 a las 06:46:45
+-- Versión del servidor: 10.4.8-MariaDB
+-- Versión de PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -70,10 +70,14 @@ CREATE TABLE `alumno` (
 --
 
 INSERT INTO `alumno` (`matricula_alumno`, `nombre`, `apellidos`, `correo`, `password`, `licenciatura`, `semestre`, `grupo`, `estado`, `id_horario`) VALUES
+(46952, 'Diana', 'Avila', 'al046952@uacam.mx', '1234', 'Sistemas Computacionales.', 7, 'A', 'Ausente', 1),
 (49738, 'José Luis', 'Villanueva Pech', 'al049738@uacam.mx', '1234', 'Ing. Sistemas Computacionales', 7, 'A', 'activo', 1),
+(50610, 'Jorge', 'Espadas', 'al050610@uacam.mx', '1234', 'Sistemas Computacionales.', 7, 'A', 'Ausente', 2),
 (51426, 'Alfonso', 'Sánchez Pérez', 'al051426@uacam.mx', '11111', 'Médico Cirujano', 4, 'C', 'activo', 2),
 (52185, 'Pedro', 'Balam', 'al052185@uacam.mx', 'pedro124', 'ing. Mecatrónica', 5, 'A', 'ausente', 1),
-(52369, 'miguel', 'hernadez', 'al052369@uacam.mx', 'password', 'Psicología', 3, 'B', 'ausente', 1);
+(52369, 'miguel', 'hernadez', 'al052369@uacam.mx', 'password', 'Psicología', 3, 'B', 'ausente', 1),
+(56494, 'Maria', 'Gonzalez', 'al056494@uacam.mx', '1234', 'Sistemas Computacionales.', 7, 'A', 'Ausente', 1),
+(56513, 'José', 'Sanchez', 'al056513@uacam.mx', '1234', 'Sistemas Computacionales.', 7, 'A', 'Ausente', 1);
 
 -- --------------------------------------------------------
 
@@ -96,8 +100,9 @@ CREATE TABLE `asesor` (
 --
 
 INSERT INTO `asesor` (`id_empleado`, `nombre`, `apellidos`, `correo`, `password`, `ubicacion`, `matricula_alumno`) VALUES
-(13587, 'Susana', 'Duarte', 'al013587@uacam.mx', '12345', 'CIC', 52185),
+(13587, 'Susana', 'Duarte', 'al013587@uacam.mx', '12345', 'CIC', 50610),
 (36478, 'Francisco', 'Morales ', 'al036478@uacam.mx', 'password', 'CIC', 51426),
+(45219, 'Ángel', 'Morán', 'al045219@uacam.mx', '12345', 'CIC', 52185),
 (64987, 'Gerardo', 'Fernandez', 'al064987@uacam.mx', '1234', 'CIC', 51426);
 
 -- --------------------------------------------------------
@@ -167,7 +172,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT de la tabla `alumno`
 --
 ALTER TABLE `alumno`
-  MODIFY `matricula_alumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52370;
+  MODIFY `matricula_alumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56514;
 
 --
 -- AUTO_INCREMENT de la tabla `asesor`
